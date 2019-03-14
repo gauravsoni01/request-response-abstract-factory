@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{637990DC-2A89-4CF8-A371-DC20108BE5E8}|Default">
+  <MonoDevelop.Ide.ItemProperties.Request-Response-Abstract FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Request-Response-Abstract/StartApp/StartApp.cs">
+    <Files>
+      <File FileName="Request-Response-Abstract/StartApp/StartApp.cs" Line="7" Column="9" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
