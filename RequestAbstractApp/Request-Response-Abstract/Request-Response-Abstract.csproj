@@ -7,5 +7,12 @@
 
   <ItemGroup>
     <Folder Include="StartApp\" />
+    <Folder Include="RequestModel\" />
+    <Folder Include="ResponseModel\" />
+    <Folder Include="RequestAbstract\" />
+    <Folder Include="ApiService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
   </ItemGroup>
 </Project>
