@@ -6,7 +6,7 @@ namespace RequestResponseAbstract
     {
         public static void Main(string[] args)
         {
-
+            new ApiService().MyRequestResponse();
         }
     }
 }

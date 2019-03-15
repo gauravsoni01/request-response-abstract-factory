@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Net.Http;
 
 namespace RequestResponseAbstract
 {
     public class BaseRequestModel
     {
-        public BaseRequestModel()
-        {
-        }
+    }
+
+    public enum MethodEnum
+    {
+        Post,
+        Get
     }
 }

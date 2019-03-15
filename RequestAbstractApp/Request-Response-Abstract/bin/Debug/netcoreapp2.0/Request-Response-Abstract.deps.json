@@ -1,14 +1,15 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "594c4b2e9f8dd84858e3794c1151bebadc5899f2"
+    "signature": "7fff0fa4f0f0cf6b07333ab19a2f2ceca9f01571"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Request-Response-Abstract/1.0.0": {
         "dependencies": {
-          "Microsoft.Net.Http": "2.2.29"
+          "Microsoft.Net.Http": "2.2.29",
+          "Newtonsoft.Json": "12.0.1"
         },
         "runtime": {
           "Request-Response-Abstract.dll": {}
@@ -28,6 +29,11 @@
         "runtime": {
           "lib/net45/System.Net.Http.Extensions.dll": {},
           "lib/net45/System.Net.Http.Primitives.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       }
     }
@@ -58,6 +64,13 @@
       "sha512": "sha512-v8nUdSv3acVH5xQ7dYKHjdPXRRtpAW8YCWHa7M1rAwhfnKg5tSop21spsMeExcEqwmE86pgT9rECTgObWlgOOg==",
       "path": "microsoft.net.http/2.2.29",
       "hashPath": "microsoft.net.http.2.2.29.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
+      "path": "newtonsoft.json/12.0.1",
+      "hashPath": "newtonsoft.json.12.0.1.nupkg.sha512"
     }
   }
 }

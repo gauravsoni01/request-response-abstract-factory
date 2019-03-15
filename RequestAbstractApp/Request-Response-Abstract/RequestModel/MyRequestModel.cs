@@ -4,8 +4,6 @@ namespace RequestResponseAbstract
 {
     public class MyRequestModel : BaseRequestModel
     {
-        public MyRequestModel()
-        {
-        }
+        public string Skill { get; set; }
     }
 }

@@ -1,27 +1,37 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace RequestResponseAbstract
 {
-    public class MyRequestAbstract : BaseRequestAbstract<BaseResponseModel>
+    public class MyRequestAbstract : BaseRequestAbstract<MyResponseModel>
     {
-        public MyRequestAbstract()
+        string Skill;
+
+        public MyRequestAbstract(string Skill)
         {
+            this.Skill = Skill;
         }
 
         public override HttpClient GetClient()
         {
-            return base.GetClient("");
+            Method = "Get";
+            Params = Skill;
+            return base.GetClient("myrequest/");
         }
 
-        public override BaseRequestModel RequestModel()
+        public override List<MyResponseModel> Response(string response)
         {
-            return new BaseRequestModel();
-        }
-
-        public override BaseResponseModel Response(string response)
-        {
-            return new BaseResponseModel();
+            if(!string.IsNullOrEmpty(response))
+            {
+                List<MyResponseModel> myResponseModel = JsonConvert.DeserializeObject<List<MyResponseModel>>(response);
+                return myResponseModel;
+            }
+            else
+            {
+                return null; 
+            }
         }
     }
 }

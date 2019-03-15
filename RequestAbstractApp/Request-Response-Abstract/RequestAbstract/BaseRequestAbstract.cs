@@ -1,10 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
 
 namespace RequestResponseAbstract
 {
     public abstract class BaseRequestAbstract<T> where T : BaseResponseModel
     {
+        private string API_URL = "http://localhost:5000/api/";
+
+        public string Method { get; set; }
+
+        public string Params { get; set; } = "";
+
         /// <summary>
         /// This methode is created to make implementation in child request classes.
         /// Using this method you can call the base class non abstract GetClient method and get paths of your multiple requests.
@@ -18,13 +27,7 @@ namespace RequestResponseAbstract
         /// </summary>
         /// <returns>The response.</returns>
         /// <param name="response">Response.</param>
-        public abstract T Response(string response);
-
-        /// <summary>
-        /// This method creates the request model object to put in API execute method.
-        /// </summary>
-        /// <returns>The model.</returns>
-        public abstract BaseRequestModel RequestModel();
+        public abstract List<T> Response(string response);
 
         /// <summary>
         /// This method actually returns the whole client object with authentication and header.
@@ -33,7 +36,10 @@ namespace RequestResponseAbstract
         /// <param name="path">Path.</param>
         public HttpClient GetClient(string path)
         {
-            return new HttpClient(); 
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri( API_URL + path);
+
+            return client;
         }
 
         /// <summary>
@@ -41,9 +47,29 @@ namespace RequestResponseAbstract
         /// Then further you will proceed to API call and returns the response accordingly.
         /// </summary>
         /// <returns>The execute.</returns>
-        public T Execute()
+        public List<T> Execute()
         {
-            return Response("");
+            try
+            {
+                var client = GetClient();
+                HttpResponseMessage response = null;
+                if (Method.Equals(MethodEnum.Get.ToString()))
+                {
+                    response = client.GetAsync(Params).Result;
+                }
+                var responsemessage = "";
+                if (response != null)
+                {
+                    responsemessage = response.Content.ReadAsStringAsync().Result;
+                    return Response(responsemessage);
+                }
+
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex); 
+            }
+            return null;
         }
     }
 }
