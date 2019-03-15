@@ -8,3 +8,4 @@
 /Users/gauravsoni/Projects/Request-Response Abstract/Request-Response-API/Request-Response-API/obj/Debug/netcoreapp2.0/Request-Response-API.AssemblyInfo.cs
 /Users/gauravsoni/Projects/Request-Response Abstract/Request-Response-API/Request-Response-API/obj/Debug/netcoreapp2.0/Request-Response-API.dll
 /Users/gauravsoni/Projects/Request-Response Abstract/Request-Response-API/Request-Response-API/obj/Debug/netcoreapp2.0/Request-Response-API.pdb
+/Users/gauravsoni/Projects/Request-Response Abstract/Request-Response-API/Request-Response-API/obj/Debug/netcoreapp2.0/Request-Response-API.csprojAssemblyReference.cache
